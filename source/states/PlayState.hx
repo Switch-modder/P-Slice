@@ -3141,7 +3141,8 @@ private function popUpScore(note:Note = null):Void
 	// tryna do MS based judgment due to popular demand
 	var daRating:Rating = Conductor.judgeNote(ratingsData, noteDiff / playbackRate);
 
-	if(daRating.name == "bad" || daRating.name == "shit") combo = 0; //V-Slice combo thingy
+	// Commented out since I like the psych style better
+	// if(daRating.name == "bad" || daRating.name == "shit") combo = 0; //V-Slice combo thingy
 
 	totalNotesHit += daRating.ratingMod;
 	note.ratingMod = daRating.ratingMod;
@@ -3243,7 +3244,8 @@ private function popUpScore(note:Note = null):Void
 			numScore.antialiasing = antialias;
 
 			// if (combo >= 10 || combo == 0)
-			if (showComboNum)
+			// if (showComboNum)
+			if (showComboNum && combo >= 10)
 				comboGroup.add(numScore);
 
 			FlxTween.tween(numScore, {alpha: 0}, 0.2 / playbackRate, {
