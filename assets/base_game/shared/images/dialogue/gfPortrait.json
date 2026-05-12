@@ -1,0 +1,25 @@
+{
+	"position": [
+		370,
+		0
+	],
+	"dialogue_pos": "left",
+	"no_antialiasing": false,
+	"scale": 1,
+	"image": "gfPortrait",
+	"animations": [
+		{
+			"loop_offsets": [
+				2,
+				1
+			],
+			"anim": "idle",
+			"idle_offsets": [
+				2,
+				1
+			],
+			"loop_name": "Portrait Enter instance 10008",
+			"idle_name": "Portrait Enter instance 10008"
+		}
+	]
+}

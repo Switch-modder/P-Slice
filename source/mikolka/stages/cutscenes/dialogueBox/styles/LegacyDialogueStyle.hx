@@ -32,14 +32,13 @@ class LegacyDialogueStyle extends DialogueStyle {
 	}
 	public function makeDialogueBox():FlxSprite{
 		box = new FlxSprite(70+((FlxG.width-FlxG.initialWidth)/2), 370);
-		var staticBox = ["speech bubble normal0000"];
 		box.antialiasing = VsliceOptions.ANTIALIASING;
 		box.frames = Paths.getSparrowAtlas('speech_bubble');
 		box.scrollFactor.set();
-		box.animation.addByNames ('normal', staticBox, 24, false);
+		box.animation.addByPrefix('normal', "speech bubble normal", 24, false);
 		box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-		box.animation.addByNames ('normalWait', staticBox, 24,true);
-		box.animation.addByNames ('normalClick', staticBox, 24, false);
+		box.animation.addByPrefix('normalWait', "speech bubble normal", 24,true);
+		box.animation.addByPrefix('normalClick', "speech bubble normal", 24, false);
 		//box.animation.addByPrefix('normalClick', 'SENPAI ANGRY IMPACT SPEECH0', 24, false);
 		box.animation.play('normalOpen', true);
 
@@ -91,7 +90,7 @@ class LegacyDialogueStyle extends DialogueStyle {
 		swagDialogue.font = Paths.font('pixel-latin.ttf');
 		set_sound("pixelText");
 		swagDialogue.color = 0xFF000000;
-		swagDialogue.borderStyle = NONE;
+		swagDialogue.borderStyle = SHADOW;
 		swagDialogue.borderColor = 0xFF3D3D3D;
 		//swagDialogue.shadowOffset.set(2, 2);
 		swagDialogue.completeCallback = () -> isDone = true;

@@ -11,6 +11,7 @@
   },
   "stickerPacks": {
     "tutorial": ["bf", "gf"],
+    "week1": ["bf", "gf", "dad"],
     "parents": ["dad", "mom"],
     "all": ["bf", "gf", "dad", "mom", "monster", "pico"]
   }

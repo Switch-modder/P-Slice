@@ -1,0 +1,21 @@
+{
+	"style": "legacy",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "gfPortrait",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "Hey! You're cute, heres how you rap.."
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "boyfriendPortrait",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "beeEEEEEEeeeeeEEEee"
+		}
+	]
+}
