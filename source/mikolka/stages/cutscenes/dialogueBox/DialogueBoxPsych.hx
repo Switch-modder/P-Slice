@@ -77,6 +77,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 				{
 					this.style = new DecayDialogueStyle();
 				}
+			case "legacy":
+				{
+					this.style = new LegacyDialogueStyle();
+				}
 			default:
 				{
 					this.style = new PsychDialogueStyle();
