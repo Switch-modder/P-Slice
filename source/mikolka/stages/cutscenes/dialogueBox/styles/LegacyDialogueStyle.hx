@@ -25,7 +25,7 @@ class LegacyDialogueStyle extends DialogueStyle {
 		alphaFadeinScale = 3;
 		visualUpdateThreshold = 0.05;
 
-		DEFAULT_TEXT_Y = 500;
+		DEFAULT_TEXT_Y = 470;
 		DEFAULT_TEXT_X = 206;
 		DEFAULT_TEXT_X += Std.int((FlxG.width-FlxG.initialWidth)/2);
 		closeSound = "clickText";
@@ -67,7 +67,7 @@ class LegacyDialogueStyle extends DialogueStyle {
 			case OPEN_INIT:
 				box.centerOffsets();
 				box.updateHitbox();
-				box.offset.set(10, 0);
+				box.offset.set(10, 35);
 				box.animation.play("normalOpen",true);
 				
 			case CLOSE_FINISH:
@@ -75,12 +75,12 @@ class LegacyDialogueStyle extends DialogueStyle {
 			case IDLE:
 				box.centerOffsets();
 				box.updateHitbox();
-				box.offset.set(10, 0);
+				box.offset.set(10, 35);
 				box.animation.play("normal",true);
 			case WAIT:{
 				box.centerOffsets();
 				box.updateHitbox();
-				box.offset.set(10, 0);
+				box.offset.set(10, 35);
 				box.animation.play("normalWait",true);
 			}
 			case OPEN:{}

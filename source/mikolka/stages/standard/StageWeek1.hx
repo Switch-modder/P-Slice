@@ -3,6 +3,8 @@ package mikolka.stages.standard;
 import mikolka.vslice.StickerSubState;
 import mikolka.stages.objects.StageSpotlight;
 import mikolka.compatibility.VsliceOptions;
+import mikolka.stages.cutscenes.SchoolDoof;
+import mikolka.stages.cutscenes.dialogueBox.DialogueBoxPsych.DialogueFile;
 #if !LEGACY_PSYCH
 import objects.Character;
 import objects.Note;
@@ -16,6 +18,11 @@ class StageWeek1 extends BaseStage
 	override function create()
 	{
 		if(songName == "tutorial") StickerSubState.STICKER_PACK = "tutorial";
+		var cutscene = new SchoolDoof(songName);
+		if(isStoryMode && !seenCutscene)
+		{
+			if(songName == 'bopeebo') setStartCallback(cutscene.doSchoolIntro);
+		}
 		var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 		add(bg);
 		var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
